@@ -11,7 +11,7 @@ const App = () => {
       let updatedSquares = [...squares]
 
       if (squares[index]){
-        return
+        return null
       }
       // for (let i = 0; i < squares.length; i++){
         // let currentPlayer = ""
