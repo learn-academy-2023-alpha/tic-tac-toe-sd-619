@@ -9,6 +9,10 @@ const App = () => {
 
   const gamePlay = (index) => {
       let updatedSquares = [...squares]
+
+      if (squares[index]){
+        return
+      }
       // for (let i = 0; i < squares.length; i++){
         // let currentPlayer = ""
      
