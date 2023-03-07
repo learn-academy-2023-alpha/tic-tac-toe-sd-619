@@ -20,7 +20,7 @@ Branch name cant-click
 Set condtional statement for user to not be able to click square after being marked ✅
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
 Branch name Winner
-Condtional winner 
+Condtional winner, created for loop that iterates through all possible wins and retruns alert with winning team either X or O ✅
 - As a user, I can't continue playing the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.
