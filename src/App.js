@@ -5,10 +5,21 @@ import './App.css'
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
 
+  const [currentPlayer,setCurrentPlayer] = useState("❌")
+
   const gamePlay = (index) => {
       let updatedSquares = [...squares]
-      updatedSquares[index] = "❌"
+      // for (let i = 0; i < squares.length; i++){
+        // let currentPlayer = ""
+     
+        // currentPlayer = currentPlayer === "⭕️" ? "❌" : "❌" 
+      updatedSquares[index] = currentPlayer
       setSquares(updatedSquares)
+      setCurrentPlayer(currentPlayer === "❌" ? "⭕️" : "❌" )
+      
+      
+
+      
 
   }
 
