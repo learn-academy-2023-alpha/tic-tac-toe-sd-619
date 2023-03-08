@@ -7,6 +7,7 @@ const App = () => {
 
   const [currentPlayer,setCurrentPlayer] = useState("❌")
   const [winner,setWinner] = useState(null)
+  
 
   const gamePlay = (index) => {
       let updatedSquares = [...squares]
@@ -18,7 +19,10 @@ const App = () => {
         // let currentPlayer = ""
      
         // currentPlayer = currentPlayer === "⭕️" ? "❌" : "❌" 
-      updatedSquares[index] = currentPlayer
+        updatedSquares[index] = currentPlayer
+      //   const draw = updatedSquares.every((square)=> square != null)
+      //  if (draw && !setWinner(currentPlayer)){alert("its a draw");
+      //    return null} 
       const horizontalWins = [[0, 1, 2], [3, 4, 5], [6, 7, 8]];
       const verticalWins = [[0, 3, 6], [1, 4, 7], [2, 5, 8]];
       const diagonalWins = [[0, 4, 8], [2, 4, 6]]
@@ -26,11 +30,16 @@ const App = () => {
       
       setSquares(updatedSquares)
       for(let i = 0; i < tictactoeWin.length; i++){
+  
           const [a,b,c] = tictactoeWin[i] 
         if (updatedSquares[a] && updatedSquares[a] === updatedSquares[b] && updatedSquares[a] === updatedSquares[c]) {
-          setWinner(currentPlayer); return alert(`${currentPlayer} Player has won the game!`) 
-          
+          setWinner(currentPlayer); return alert(`${currentPlayer} Player has won the game!`) }
+         else if (currentPlayer === null) {
+          return null
         }
+
+      
+
         
       setCurrentPlayer(currentPlayer === "❌" ? "⭕️" : "❌" )
       
@@ -44,7 +53,7 @@ const App = () => {
       
       
 
-  }
+  
 
   return (
     <>
@@ -64,6 +73,6 @@ const App = () => {
      
     </>
   )
+    }
 }
-
 export default App
